@@ -17,14 +17,14 @@ export default function Navigation() {
 
   const links = [
     {
-      label: 'Cabins',
-      href: '/cabins',
-      icon: HiHomeModern
-    },
-    {
       label: 'About',
       href: '/about',
       icon: AiOutlineInfoCircle
+    },
+    {
+      label: 'Cabins',
+      href: '/cabins',
+      icon: HiHomeModern
     },
     {
       label: 'Account',

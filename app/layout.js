@@ -21,9 +21,12 @@ export const metadata = {
     template: '%s - The Wild Oasis',
     default: 'The Wild Oasis'
   },
-  description: "Luxurious cabin hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests.",
-  themeColor: '#141C24'
+  description: "Luxurious cabin hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests."
 };
+
+export const viewport = {
+  themeColor: '#141C24'
+}
 
 export default function RootLayout({ children }) {
   return (

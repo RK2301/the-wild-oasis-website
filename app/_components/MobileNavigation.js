@@ -22,7 +22,7 @@ function MobileNavigation({ pathname, links, session }) {
                         className={`
                         py-2 px-3 rounded-full transition-all
                         flex items-center gap-2
-                        ${routeSelected ? 'bg-accent-400' : ''}
+                        ${routeSelected ? 'bg-accent-600' : ''}
                         ${routeSelected ? 'text-primary-100' : ''}`}
                     >
                         {routeSelected && link.icon && <link.icon className='w-6 h-6' />}
