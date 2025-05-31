@@ -3,6 +3,7 @@ import { Josefin_Sans } from 'next/font/google'
 import Header from "@/app/_components/Header";
 import ReservationProvider from '@/app/_components/ReservationContext';
 import AuthProvider from '@/app/context/AuthProvider';
+import { Toaster } from 'react-hot-toast';
 
 
 const josefin = Josefin_Sans({
@@ -35,6 +36,25 @@ export default function RootLayout({ children }) {
         className={`bg-primary-950 text-primary-50 min-h-screen
           ${josefin.className} flex flex-col antialiased relative`}
       >
+        <Toaster
+          position='top-center'
+          toastOptions={{
+
+            style: {
+              backgroundColor: 'rgb(27, 38, 49, 0.8)',
+              backdropFilter: 'blur(5px)',
+              color: '#D4DEE7',
+              fontSize: '1.2rem'
+            },
+            success: {
+              duration: 5000,
+            },
+            error: {
+              duration: 7000
+            }
+          }}
+        />
+
         <AuthProvider>
           <Header />
 

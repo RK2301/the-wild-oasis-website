@@ -4,7 +4,7 @@ import { useFormStatus } from "react-dom"
 import SpinnerMini from "./SpinnerMini"
 
 
-function SubmitButton({ children, disabled, small }) {
+function SubmitButton({ children, disabled, small, isLoading }) {
     const { pending } = useFormStatus()
 
     return (
@@ -15,9 +15,9 @@ function SubmitButton({ children, disabled, small }) {
           disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300
           flex items-center justify-center gap-4 basis-10/12 ${small ? 'md:basis-5/12' : 'md:basis-4/12'}
           `}
-            disabled={pending || disabled}
+            disabled={pending || disabled || isLoading}
         >
-            {pending && <SpinnerMini />}
+            {(pending || isLoading) && <SpinnerMini />}
             <span> {children} </span>
         </button>
     )
